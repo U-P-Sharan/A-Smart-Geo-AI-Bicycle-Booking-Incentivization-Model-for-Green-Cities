@@ -1,0 +1,526 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EFDFB4DC-09F9-4805-9949-5B450889F743}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>goWheel</RootNamespace>
+    <AssemblyName>goWheel</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
+      <HintPath>..\packages\BouncyCastle.Cryptography.2.4.0\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.4, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.4\lib\net461\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\css\bootstrap-datetimepicker.min.css" />
+    <Content Include="assets\css\bootstrap.min.css" />
+    <Content Include="assets\css\intro.css" />
+    <Content Include="assets\css\style.css" />
+    <Content Include="assets\fonts\MaterialIcons-Regular.html" />
+    <Content Include="assets\img\doctors\doctor-01.jpg" />
+    <Content Include="assets\img\doctors\doctor-02.jpg" />
+    <Content Include="assets\img\doctors\doctor-03.jpg" />
+    <Content Include="assets\img\doctors\doctor-04.jpg" />
+    <Content Include="assets\img\doctors\doctor-05.jpg" />
+    <Content Include="assets\img\doctors\doctor-06.jpg" />
+    <Content Include="assets\img\doctors\doctor-07.jpg" />
+    <Content Include="assets\img\doctors\doctor-08.jpg" />
+    <Content Include="assets\img\doctors\doctor-09.jpg" />
+    <Content Include="assets\img\doctors\doctor-10.jpg" />
+    <Content Include="assets\img\doctors\doctor-11.jpg" />
+    <Content Include="assets\img\doctors\doctor-12.jpg" />
+    <Content Include="assets\img\doctors\doctor-thumb-01.jpg" />
+    <Content Include="assets\img\doctors\doctor-thumb-02.jpg" />
+    <Content Include="assets\img\doctors\doctor-thumb-03.jpg" />
+    <Content Include="assets\img\doctors\doctor-thumb-04.jpg" />
+    <Content Include="assets\img\doctors\doctor-thumb-05.jpg" />
+    <Content Include="assets\img\doctors\doctor-thumb-06.jpg" />
+    <Content Include="assets\img\doctors\doctor-thumb-07.jpg" />
+    <Content Include="assets\img\doctors\doctor-thumb-08.jpg" />
+    <Content Include="assets\img\doctors\doctor-thumb-09.jpg" />
+    <Content Include="assets\img\doctors\doctor-thumb-10.jpg" />
+    <Content Include="assets\img\favicon.png" />
+    <Content Include="assets\img\features\feature-01.jpg" />
+    <Content Include="assets\img\features\feature-02.jpg" />
+    <Content Include="assets\img\features\feature-03.jpg" />
+    <Content Include="assets\img\features\feature-04.jpg" />
+    <Content Include="assets\img\features\feature-05.jpg" />
+    <Content Include="assets\img\features\feature-06.jpg" />
+    <Content Include="assets\img\features\feature.png" />
+    <Content Include="assets\img\footer-logo.png" />
+    <Content Include="assets\img\icon-01.png" />
+    <Content Include="assets\img\icon-02.png" />
+    <Content Include="assets\img\icon-03.png" />
+    <Content Include="assets\img\img-01.jpg" />
+    <Content Include="assets\img\img-02.jpg" />
+    <Content Include="assets\img\img-03.jpg" />
+    <Content Include="assets\img\img-04.jpg" />
+    <Content Include="assets\img\location.png" />
+    <Content Include="assets\img\login-banner.png" />
+    <Content Include="assets\img\logo.png" />
+    <Content Include="assets\img\patients\patient.jpg" />
+    <Content Include="assets\img\patients\patient1.jpg" />
+    <Content Include="assets\img\patients\patient10.jpg" />
+    <Content Include="assets\img\patients\patient11.jpg" />
+    <Content Include="assets\img\patients\patient2.jpg" />
+    <Content Include="assets\img\patients\patient3.jpg" />
+    <Content Include="assets\img\patients\patient4.jpg" />
+    <Content Include="assets\img\patients\patient5.jpg" />
+    <Content Include="assets\img\patients\patient6.jpg" />
+    <Content Include="assets\img\patients\patient7.jpg" />
+    <Content Include="assets\img\patients\patient8.jpg" />
+    <Content Include="assets\img\patients\patient9.jpg" />
+    <Content Include="assets\img\search-bg.png" />
+    <Content Include="assets\img\search.png" />
+    <Content Include="assets\img\specialities\specialities-01.png" />
+    <Content Include="assets\img\specialities\specialities-02.png" />
+    <Content Include="assets\img\specialities\specialities-03.png" />
+    <Content Include="assets\img\specialities\specialities-04.png" />
+    <Content Include="assets\img\specialities\specialities-05.png" />
+    <Content Include="assets\img\video-call.jpg" />
+    <Content Include="assets\js\bootstrap-datetimepicker.min.js" />
+    <Content Include="assets\js\bootstrap.min.js" />
+    <Content Include="assets\js\circle-progress.min.js" />
+    <Content Include="assets\js\encry.js" />
+    <Content Include="assets\js\jquery.min.js" />
+    <Content Include="assets\js\moment.min.js" />
+    <Content Include="assets\js\popper.min.js" />
+    <Content Include="assets\js\profile-settings.js" />
+    <Content Include="assets\js\script.js" />
+    <Content Include="assets\js\slick.js" />
+    <Content Include="assets\js\UserGuide.js" />
+    <Content Include="assets\plugins\bootstrap-tagsinput\css\bootstrap-tagsinput.css" />
+    <Content Include="assets\plugins\bootstrap-tagsinput\js\bootstrap-tagsinput.js" />
+    <Content Include="assets\plugins\dropzone\dropzone.min.css" />
+    <Content Include="assets\plugins\dropzone\dropzone.min.js" />
+    <Content Include="assets\plugins\fancybox\jquery.fancybox.min.css" />
+    <Content Include="assets\plugins\fancybox\jquery.fancybox.min.js" />
+    <Content Include="assets\plugins\fontawesome\css\all.min.css" />
+    <Content Include="assets\plugins\fontawesome\css\fontawesome.min.css" />
+    <Content Include="assets\plugins\fontawesome\webfonts\fa-brands-400.html" />
+    <Content Include="assets\plugins\fontawesome\webfonts\fa-brands-400.svg" />
+    <Content Include="assets\plugins\fontawesome\webfonts\fa-regular-400.html" />
+    <Content Include="assets\plugins\fontawesome\webfonts\fa-regular-400.svg" />
+    <Content Include="assets\plugins\fontawesome\webfonts\fa-solid-900.html" />
+    <Content Include="assets\plugins\fontawesome\webfonts\fa-solid-900.svg" />
+    <Content Include="assets\plugins\fullcalendar\fullcalendar.min.css" />
+    <Content Include="assets\plugins\fullcalendar\fullcalendar.min.js" />
+    <Content Include="assets\plugins\fullcalendar\jquery.fullcalendar.js" />
+    <Content Include="assets\plugins\jquery-ui\jquery-ui.min.js" />
+    <Content Include="assets\plugins\select2\css\select2.min.css" />
+    <Content Include="assets\plugins\select2\js\select2.min.js" />
+    <Content Include="assets\plugins\theia-sticky-sidebar\ResizeSensor.js" />
+    <Content Include="assets\plugins\theia-sticky-sidebar\theia-sticky-sidebar.js" />
+    <Content Include="BookBiCycle.aspx" />
+    <Content Include="changepswd.aspx" />
+    <Content Include="dashboard.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="index.aspx" />
+    <Content Include="Invoice.aspx" />
+    <Content Include="login.aspx" />
+    <Content Include="logout.aspx" />
+    <Content Include="ManagePost.aspx" />
+    <Content Include="MyBooking.aspx" />
+    <Content Include="post.aspx" />
+    <Content Include="profile.aspx" />
+    <Content Include="qus.aspx" />
+    <Content Include="Recharge.aspx" />
+    <Content Include="register.aspx" />
+    <Content Include="vendor.aspx" />
+    <Content Include="Vendor\AddBycycle.aspx" />
+    <Content Include="Vendor\AddLocation.aspx" />
+    <Content Include="Vendor\assets\css\bootstrap.min.css" />
+    <Content Include="Vendor\assets\css\feathericon.min.css" />
+    <Content Include="Vendor\assets\css\font-awesome.min.css" />
+    <Content Include="Vendor\assets\css\select2.min.css" />
+    <Content Include="Vendor\assets\css\style.css" />
+    <Content Include="Vendor\assets\fonts\feathericon.svg" />
+    <Content Include="Vendor\assets\fonts\fontawesome-webfont3e6e.html" />
+    <Content Include="Vendor\assets\fonts\fontawesome-webfont3e6e.svg" />
+    <Content Include="Vendor\assets\fonts\MaterialIcons-Regular.html" />
+    <Content Include="Vendor\assets\img\doctors\doctor-thumb-01.jpg" />
+    <Content Include="Vendor\assets\img\doctors\doctor-thumb-02.jpg" />
+    <Content Include="Vendor\assets\img\doctors\doctor-thumb-03.jpg" />
+    <Content Include="Vendor\assets\img\doctors\doctor-thumb-04.jpg" />
+    <Content Include="Vendor\assets\img\doctors\doctor-thumb-05.jpg" />
+    <Content Include="Vendor\assets\img\doctors\doctor-thumb-06.jpg" />
+    <Content Include="Vendor\assets\img\doctors\doctor-thumb-07.jpg" />
+    <Content Include="Vendor\assets\img\doctors\doctor-thumb-08.jpg" />
+    <Content Include="Vendor\assets\img\doctors\doctor-thumb-09.jpg" />
+    <Content Include="Vendor\assets\img\doctors\doctor-thumb-10.jpg" />
+    <Content Include="Vendor\assets\img\favicon.png" />
+    <Content Include="Vendor\assets\img\img-01.jpg" />
+    <Content Include="Vendor\assets\img\logo-small.png" />
+    <Content Include="Vendor\assets\img\logo-white.png" />
+    <Content Include="Vendor\assets\img\logo.png" />
+    <Content Include="Vendor\assets\img\patients\patient1.jpg" />
+    <Content Include="Vendor\assets\img\patients\patient10.jpg" />
+    <Content Include="Vendor\assets\img\patients\patient11.jpg" />
+    <Content Include="Vendor\assets\img\patients\patient12.jpg" />
+    <Content Include="Vendor\assets\img\patients\patient13.jpg" />
+    <Content Include="Vendor\assets\img\patients\patient14.jpg" />
+    <Content Include="Vendor\assets\img\patients\patient15.jpg" />
+    <Content Include="Vendor\assets\img\patients\patient2.jpg" />
+    <Content Include="Vendor\assets\img\patients\patient3.jpg" />
+    <Content Include="Vendor\assets\img\patients\patient4.jpg" />
+    <Content Include="Vendor\assets\img\patients\patient5.jpg" />
+    <Content Include="Vendor\assets\img\patients\patient6.jpg" />
+    <Content Include="Vendor\assets\img\patients\patient7.jpg" />
+    <Content Include="Vendor\assets\img\patients\patient8.jpg" />
+    <Content Include="Vendor\assets\img\patients\patient9.jpg" />
+    <Content Include="Vendor\assets\img\profiles\avatar-01.jpg" />
+    <Content Include="Vendor\assets\img\profiles\avatar-02.jpg" />
+    <Content Include="Vendor\assets\img\profiles\avatar-03.jpg" />
+    <Content Include="Vendor\assets\img\profiles\avatar-04.jpg" />
+    <Content Include="Vendor\assets\img\specialities\specialities-01.png" />
+    <Content Include="Vendor\assets\img\specialities\specialities-02.png" />
+    <Content Include="Vendor\assets\img\specialities\specialities-03.png" />
+    <Content Include="Vendor\assets\img\specialities\specialities-04.png" />
+    <Content Include="Vendor\assets\img\specialities\specialities-05.png" />
+    <Content Include="Vendor\assets\js\bootstrap.min.js" />
+    <Content Include="Vendor\assets\js\chart.morris.js" />
+    <Content Include="Vendor\assets\js\form-validation.js" />
+    <Content Include="Vendor\assets\js\jquery-3.2.1.min.js" />
+    <Content Include="Vendor\assets\js\jquery.maskedinput.min.js" />
+    <Content Include="Vendor\assets\js\mask.js" />
+    <Content Include="Vendor\assets\js\popper.min.js" />
+    <Content Include="Vendor\assets\js\script.js" />
+    <Content Include="Vendor\assets\js\select2.min.js" />
+    <Content Include="Vendor\assets\plugins\datatables\datatables.min.css" />
+    <Content Include="Vendor\assets\plugins\datatables\datatables.min.js" />
+    <Content Include="Vendor\assets\plugins\datatables\jquery.dataTables.min.js" />
+    <Content Include="Vendor\assets\plugins\morris\morris.css" />
+    <Content Include="Vendor\assets\plugins\morris\morris.min.js" />
+    <Content Include="Vendor\assets\plugins\raphael\raphael.min.js" />
+    <Content Include="Vendor\assets\plugins\slimscroll\jquery.slimscroll.min.js" />
+    <Content Include="Vendor\FareDiscounts.aspx" />
+    <Content Include="Vendor\Home.aspx" />
+    <Content Include="Vendor\index.aspx" />
+    <Content Include="Vendor\ManageBicycle.aspx" />
+    <Content Include="Vendor\ManageLoccation.aspx" />
+    <Content Include="Vendor\ManageRide.aspx" />
+    <Content Include="Vendor\ManageUser.aspx" />
+    <Content Include="Vendor\ManageVendor.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BookBiCycle.aspx.cs">
+      <DependentUpon>BookBiCycle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BookBiCycle.aspx.designer.cs">
+      <DependentUpon>BookBiCycle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="changepswd.aspx.cs">
+      <DependentUpon>changepswd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="changepswd.aspx.designer.cs">
+      <DependentUpon>changepswd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dashboard.aspx.cs">
+      <DependentUpon>dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dashboard.aspx.designer.cs">
+      <DependentUpon>dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Invoice.aspx.cs">
+      <DependentUpon>Invoice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Invoice.aspx.designer.cs">
+      <DependentUpon>Invoice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="logout.aspx.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="logout.aspx.designer.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ManagePost.aspx.cs">
+      <DependentUpon>ManagePost.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ManagePost.aspx.designer.cs">
+      <DependentUpon>ManagePost.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MyBooking.aspx.cs">
+      <DependentUpon>MyBooking.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyBooking.aspx.designer.cs">
+      <DependentUpon>MyBooking.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="post.aspx.cs">
+      <DependentUpon>post.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="post.aspx.designer.cs">
+      <DependentUpon>post.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="profile.aspx.cs">
+      <DependentUpon>profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="profile.aspx.designer.cs">
+      <DependentUpon>profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="qus.aspx.cs">
+      <DependentUpon>qus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="qus.aspx.designer.cs">
+      <DependentUpon>qus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Recharge.aspx.cs">
+      <DependentUpon>Recharge.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Recharge.aspx.designer.cs">
+      <DependentUpon>Recharge.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="register.aspx.cs">
+      <DependentUpon>register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="register.aspx.designer.cs">
+      <DependentUpon>register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vendor.aspx.cs">
+      <DependentUpon>vendor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vendor.aspx.designer.cs">
+      <DependentUpon>vendor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vendor\AddBycycle.aspx.cs">
+      <DependentUpon>AddBycycle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vendor\AddBycycle.aspx.designer.cs">
+      <DependentUpon>AddBycycle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vendor\AddLocation.aspx.cs">
+      <DependentUpon>AddLocation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vendor\AddLocation.aspx.designer.cs">
+      <DependentUpon>AddLocation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vendor\FareDiscounts.aspx.cs">
+      <DependentUpon>FareDiscounts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vendor\FareDiscounts.aspx.designer.cs">
+      <DependentUpon>FareDiscounts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vendor\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vendor\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vendor\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vendor\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vendor\ManageBicycle.aspx.cs">
+      <DependentUpon>ManageBicycle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vendor\ManageBicycle.aspx.designer.cs">
+      <DependentUpon>ManageBicycle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vendor\ManageLoccation.aspx.cs">
+      <DependentUpon>ManageLoccation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vendor\ManageLoccation.aspx.designer.cs">
+      <DependentUpon>ManageLoccation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vendor\ManageRide.aspx.cs">
+      <DependentUpon>ManageRide.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vendor\ManageRide.aspx.designer.cs">
+      <DependentUpon>ManageRide.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vendor\ManageUser.aspx.cs">
+      <DependentUpon>ManageUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vendor\ManageUser.aspx.designer.cs">
+      <DependentUpon>ManageUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vendor\ManageVendor.aspx.cs">
+      <DependentUpon>ManageVendor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vendor\ManageVendor.aspx.designer.cs">
+      <DependentUpon>ManageVendor.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\fonts\MaterialIcons-Regular.eot" />
+    <Content Include="assets\fonts\MaterialIcons-Regular.ttf" />
+    <Content Include="assets\fonts\MaterialIcons-Regular.woff" />
+    <Content Include="assets\plugins\fontawesome\webfonts\fa-brands-400.eot" />
+    <Content Include="assets\plugins\fontawesome\webfonts\fa-brands-400.ttf" />
+    <Content Include="assets\plugins\fontawesome\webfonts\fa-brands-400.woff" />
+    <Content Include="assets\plugins\fontawesome\webfonts\fa-brands-400d41d.eot" />
+    <Content Include="assets\plugins\fontawesome\webfonts\fa-regular-400.eot" />
+    <Content Include="assets\plugins\fontawesome\webfonts\fa-regular-400.ttf" />
+    <Content Include="assets\plugins\fontawesome\webfonts\fa-regular-400.woff" />
+    <Content Include="assets\plugins\fontawesome\webfonts\fa-regular-400d41d.eot" />
+    <Content Include="assets\plugins\fontawesome\webfonts\fa-solid-900.eot" />
+    <Content Include="assets\plugins\fontawesome\webfonts\fa-solid-900.ttf" />
+    <Content Include="assets\plugins\fontawesome\webfonts\fa-solid-900.woff" />
+    <Content Include="assets\plugins\fontawesome\webfonts\fa-solid-900d41d.eot" />
+    <None Include="packages.config" />
+    <Content Include="Vendor\assets\fonts\feathericon.eot" />
+    <Content Include="Vendor\assets\fonts\feathericon.ttf" />
+    <Content Include="Vendor\assets\fonts\feathericon.woff" />
+    <Content Include="Vendor\assets\fonts\feathericond41d.eot" />
+    <Content Include="Vendor\assets\fonts\fontawesome-webfont3e6e.eot" />
+    <Content Include="Vendor\assets\fonts\fontawesome-webfont3e6e.ttf" />
+    <Content Include="Vendor\assets\fonts\fontawesome-webfont3e6e.woff" />
+    <Content Include="Vendor\assets\fonts\fontawesome-webfontd41d.eot" />
+    <Content Include="Vendor\assets\fonts\MaterialIcons-Regular.eot" />
+    <Content Include="Vendor\assets\fonts\MaterialIcons-Regular.ttf" />
+    <Content Include="Vendor\assets\fonts\MaterialIcons-Regular.woff" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Uploads\" />
+    <Folder Include="UserImages\" />
+    <Folder Include="Vendor\Uploads\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>55034</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:55034/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
